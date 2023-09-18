@@ -4,7 +4,8 @@ from gandi import Domain
 
 import httplib2
 
-ovh_ip_v4 = "94.23.42.126"
+gandi_ip_v4 = "92.243.26.156"
+gandi_ip_v6 = "2001:4b98:dc0:43:f816:3eff:fe36:b573"
 
 root = Domain("pnm.tf")
 
@@ -21,7 +22,9 @@ root.mx("@", "mx.mailo.com.")
 root.spf("@", "a include:mailo.com")
 
 # servers
-root.a("@", ovh_ip_v4)
-root.a("www", ovh_ip_v4)
+root.a("@", gandi_ip_v4)
+root.a("www", gandi_ip_v4)
+root.aaaa("@", gandi_ip_v6)
+root.aaaa("www", gandi_ip_v6)
 
 print(root.push())
