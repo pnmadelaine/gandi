@@ -2,8 +2,6 @@
 
 from gandi import Domain
 
-import httplib2
-
 gandi_ip_v4 = "92.243.26.156"
 gandi_ip_v6 = "2001:4b98:dc0:43:f816:3eff:fe36:b573"
 
