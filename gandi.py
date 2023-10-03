@@ -92,11 +92,11 @@ class Domain:
         return json.dumps({'items': items}).encode()
 
     def push(self):
-      key = open("/data/pnm/secrets/gandi/key.txt", "r").read()
+      token = open("/data/pnm/secrets/gandi/token.txt", "r").read()
       api_url = "https://api.gandi.net/v5/livedns"
       url = api_url + "/domains/" + self.name + "/records"
       headers = {
-          'Authorization': "Apikey " + key,
+          'Authorization': "Bearer " + token,
           'Content-Type': 'application/json',
            }
       h = httplib2.Http(".cache")
