@@ -2,9 +2,6 @@
 
 from gandi import Domain
 
-gandi_ip_v4 = "92.243.26.156"
-gandi_ip_v6 = "2001:4b98:dc0:43:f816:3eff:fe36:b573"
-
 root = Domain("pnm.tf")
 
 # search engine webmaster console verifications
@@ -18,11 +15,5 @@ root.txt("_dmarc", "v=DMARC1; p=none; rua=mailto:root@pnm.tf")
 root.txt("@", "mailo=giJHSYjeyz3bCIAriAxVjcGHgOrxjcon")
 root.mx("@", "mx.mailo.com.")
 root.spf("@", "a include:mailo.com")
-
-# servers
-root.a("@", gandi_ip_v4)
-root.a("www", gandi_ip_v4)
-root.aaaa("@", gandi_ip_v6)
-root.aaaa("www", gandi_ip_v6)
 
 print(root.push())
