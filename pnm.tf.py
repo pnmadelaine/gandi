@@ -16,4 +16,7 @@ root.txt("@", "mailo=giJHSYjeyz3bCIAriAxVjcGHgOrxjcon")
 root.mx("@", "mx.mailo.com.")
 root.spf("@", "a include:mailo.com")
 
+# github
+root.txt("_github-pages-challenge-pnmadelaine", "299d6a2706fcb22d5aa713aaa4472c")
+
 print(root.push())
