@@ -20,15 +20,15 @@ class Domain:
 
     def a(self, name, value):
         self.check_name(name)
-        if('a' in self.records[name]):
-            raise Exception("record of type A already defined for name " + name)
-        self.records[name]['a'] = value
+        if(not 'a' in self.records[name]):
+            self.records[name]['a'] = []
+        self.records[name]['a'].append(value)
 
     def aaaa(self, name, value):
         self.check_name(name)
-        if('aaaa' in self.records[name]):
-            raise Exception("record of type AAAA already defined for name " + name)
-        self.records[name]['aaaa'] = value
+        if(not 'aaaa' in self.records[name]):
+            self.records[name]['aaaa'] = []
+        self.records[name]['aaaa'].append(value)
     
     def cname(self, name, value):
         self.check_name(name)
@@ -70,9 +70,9 @@ class Domain:
         for name in self.records:
             r = self.records[name]
             if('a' in r):
-                items.append(mk_record("A", name, [r['a']]))
+                items.append(mk_record("A", name, r['a']))
             if('aaaa' in r):
-                items.append(mk_record("AAAA", name, [r['aaaa']]))
+                items.append(mk_record("AAAA", name, r['aaaa']))
             if('cname' in r):
                 items.append(mk_record("CNAME", name, [r['cname']]))
             if('mx' in r):
