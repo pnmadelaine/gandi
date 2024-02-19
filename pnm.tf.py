@@ -21,10 +21,9 @@ root.txt("_github-pages-challenge-pnmadelaine", "299d6a2706fcb22d5aa713aaa4472c"
 for x in ["08","09","10","11"]:
     y = "185.199.1"+x+".153"
     root.a("@", y)
-    root.a("www", y)
 for x in ["0","1","2","3"]:
     y = "2606:50c0:800"+x+"::153"
     root.aaaa("@", y)
-    root.aaaa("www", y)
+root.cname("www", "pnmadelaine.github.io.")
 
 print(root.push())
