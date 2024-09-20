@@ -1,5 +1,6 @@
 import httplib2
 import json
+import os
 
 def mk_record(ty, name, values, ttl=1800):
     r = {}
@@ -92,7 +93,7 @@ class Domain:
         return json.dumps({'items': items}).encode()
 
     def push(self):
-      token = open("/data/pnm/secrets/gandi/token.txt", "r").read()
+      token = os.environ['TOKEN']
       api_url = "https://api.gandi.net/v5/livedns"
       url = api_url + "/domains/" + self.name + "/records"
       headers = {
