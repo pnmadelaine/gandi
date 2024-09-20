@@ -7,7 +7,7 @@ root = Domain("typhon-ci.org")
 # mailo
 root.txt("@", "mailo=dsOW4yoKVf0lN0MYilawU29gKuufMJsN")
 root.mx("@", "mx.mailo.com.")
-root.spf("@", "v=spf1 a include:mailo.com -all")
+root.spf("@", "a include:mailo.com")
 root.txt("mailo._domainKey", "v=DKIM1; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCdwAJaRCIWEd088s1Ybf0fa/jm4Mfoxj4+2SwqDretnglKBDdUKFilOKsm98PPyzLKmOzcIbDl7/T2A9XF615l6bKEZIlQVmkEQ3ssiU92R9Fq44w8Ru6gMO1danULThxdGJ/HrJ2BXpGBzCNCF9b4liDi1eZxNIH8dtv9QHujiwIDAQAB;")
 root.txt("_dmarc", "v=DMARC1; p=quarantine;")
 
