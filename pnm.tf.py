@@ -12,6 +12,7 @@ root.cname("b6cf11c9ba9ca8a6b661ffb0d0b99f23", "verify.bing.com.")
 root.txt("@", "mailo=giJHSYjeyz3bCIAriAxVjcGHgOrxjcon")
 root.mx("@", "mx.mailo.com.")
 root.spf("@", "v=spf1 a include:mailo.com -all")
+root.txt("mailo._domainKey", "v=DKIM1; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5w1TJ1W3gTADBOni6YS3IFsvYL895WWJUvyEHRibLdrU/HSc+gBxFKhkz8DeGkSG1m3DWIU0oriX8NegcOH8o9rJ+pOW4OP5tou7FEUway7Tpxpesy1Pzs+Yb6+YcaPejWlDFaZ9hLlqnwYnbAqCEdsUYYlnycaAs3hhSqFOZawIDAQAB;")
 root.txt("_dmarc", "v=DMARC1; p=quarantine;")
 
 # github
